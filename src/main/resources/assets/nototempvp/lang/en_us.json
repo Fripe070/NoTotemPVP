@@ -1,0 +1,11 @@
+{
+  "text.config.nototempvp-config.option.totemIgnoredEntities": "Totem Ignored Entities",
+  "text.config.nototempvp-config.option.totemIgnoredEntities.tooltip": "Entities a Totem of Undying won't help against.",
+  "text.config.nototempvp-config.option.disableElytraOn": "Disable Elytra Upon",
+  "text.config.nototempvp-config.option.disableElytraOn.tooltip": "What damage sources should disable elytra flight for a period.",
+  "text.config.nototempvp-config.option.disableElytraOn.value.player": "Player Damage",
+  "text.config.nototempvp-config.option.disableElytraOn.value.entity": "Entity Damage",
+  "text.config.nototempvp-config.option.disableElytraOn.value.anything": "Any Damage",
+  "text.config.nototempvp-config.option.elytraCooldownTicks": "Elytra Cooldown Ticks",
+  "text.config.nototempvp-config.option.elytraCooldownTicks.tooltip": "For how many ticks the elytra should be disabled.",
+}

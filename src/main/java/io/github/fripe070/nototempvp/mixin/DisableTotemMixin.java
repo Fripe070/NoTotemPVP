@@ -13,12 +13,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import static io.github.fripe070.nototempvp.NoTotemPVP.CONFIG;
 
 @Mixin(LivingEntity.class)
-public class TryUseTotemMixin {
+public abstract class DisableTotemMixin {
     @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
     private void tryUseTotem(DamageSource source, CallbackInfoReturnable<Boolean> cir) {
+        if (CONFIG.totemIgnoredEntities().contains("*")) {
+            cir.setReturnValue(false);
+            return;
+        }
+
         Entity attacker = source.getAttacker();
         if (attacker == null) return;
-
         if (CONFIG.totemIgnoredEntities().contains(Registry.ENTITY_TYPE.getId(attacker.getType()).toString())) {
             cir.setReturnValue(false);
         }
