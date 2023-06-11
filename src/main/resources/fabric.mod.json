@@ -13,7 +13,6 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "io.github.fripe070.nototempvp.client.NoTotemPVPClient"
     ],
     "main": [
       "io.github.fripe070.nototempvp.NoTotemPVP"
@@ -25,6 +24,7 @@
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "minecraft": "${minecraft_version}",
+    "owo-lib": "0.9.3+1.19"
   }
 }
