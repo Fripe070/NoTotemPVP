@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "nototempvp",
+  "version": "${version}",
+  "name": "NoTotemPVP",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/Fripe/NoTotemPVP"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/nototempvp/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "io.github.fripe070.nototempvp.client.NoTotemPVPClient"
+    ],
+    "main": [
+      "io.github.fripe070.nototempvp.NoTotemPVP"
+    ]
+  },
+  "mixins": [
+    "nototempvp.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
