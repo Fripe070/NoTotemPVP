@@ -15,11 +15,17 @@ import static net.minecraft.entity.EntityType.PLAYER;
 @Config(name = MOD_ID + "-config", wrapperName = "NoTotemPVPConfig")
 public class NoTotemPVPConfigModel {
     @SectionHeader("totemIgnore")
+    @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+    public boolean totemIgnore = true;
+
     @PredicateConstraint("containsNamespacedIds")
     @Sync(Option.SyncMode.OVERRIDE_CLIENT)
     public List<String> totemIgnoredEntities = new ArrayList<>(List.of(Registry.ENTITY_TYPE.getId(PLAYER).toString()));
 
     @SectionHeader("elytraDisable")
+    @Sync(Option.SyncMode.OVERRIDE_CLIENT)
+    public boolean elytraDisable = true;
+
     @Sync(Option.SyncMode.OVERRIDE_CLIENT)
     public DamageSources disableElytraOn = DamageSources.PLAYER;
 
