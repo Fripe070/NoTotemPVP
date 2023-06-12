@@ -1,4 +1,7 @@
 {
+  "text.config.nototempvp-config.section.totemIgnore": "Totem Ignoring",
+  "text.config.nototempvp-config.section.elytraDisable": "Elytra Disabling",
+
   "text.config.nototempvp-config.option.totemIgnore": "Totem Should Ignore",
   "text.config.nototempvp-config.option.totemIgnore.tooltip": "If totems should alow kills from selected entities.",
   "text.config.nototempvp-config.option.totemIgnoredEntities": "Totem Ignored Entities",
