@@ -17,6 +17,7 @@ public abstract class DisableElytraMixin {
     @Inject(at = @At("TAIL"), method = "damage")
     private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         if (amount == 0.0f) return;
+        if (!CONFIG.elytraDisable()) return;
 
         switch (CONFIG.disableElytraOn()) {
             case PLAYER -> {

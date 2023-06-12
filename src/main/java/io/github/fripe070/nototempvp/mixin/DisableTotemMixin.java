@@ -16,6 +16,8 @@ import static io.github.fripe070.nototempvp.NoTotemPVP.CONFIG;
 public abstract class DisableTotemMixin {
     @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
     private void tryUseTotem(DamageSource source, CallbackInfoReturnable<Boolean> cir) {
+        if (!CONFIG.totemIgnore()) return;
+
         if (CONFIG.totemIgnoredEntities().contains("*")) {
             cir.setReturnValue(false);
             return;
