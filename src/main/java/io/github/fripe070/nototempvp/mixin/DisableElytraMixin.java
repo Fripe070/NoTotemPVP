@@ -1,7 +1,6 @@
 package io.github.fripe070.nototempvp.mixin;
 
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.EntityDamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -24,7 +23,7 @@ public abstract class DisableElytraMixin {
                 if (!(source.getAttacker() instanceof PlayerEntity)) return;
             }
             case ENTITY -> {
-                if (!(source instanceof EntityDamageSource)) return;
+                if (source.getAttacker() == null) return;
             }
         }
 

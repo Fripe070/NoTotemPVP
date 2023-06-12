@@ -4,7 +4,7 @@ package io.github.fripe070.nototempvp.mixin;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -23,7 +23,7 @@ public abstract class DisableTotemMixin {
 
         Entity attacker = source.getAttacker();
         if (attacker == null) return;
-        if (CONFIG.totemIgnoredEntities().contains(Registry.ENTITY_TYPE.getId(attacker.getType()).toString())) {
+        if (CONFIG.totemIgnoredEntities().contains(Registries.ENTITY_TYPE.getId(attacker.getType()).toString())) {
             cir.setReturnValue(false);
         }
     }

@@ -2,7 +2,7 @@ package io.github.fripe070.nototempvp.config;
 
 import io.wispforest.owo.config.Option;
 import io.wispforest.owo.config.annotation.*;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class NoTotemPVPConfigModel {
     @SectionHeader("totemIgnore")
     @PredicateConstraint("containsNamespacedIds")
     @Sync(Option.SyncMode.OVERRIDE_CLIENT)
-    public List<String> totemIgnoredEntities = new ArrayList<>(List.of(Registry.ENTITY_TYPE.getId(PLAYER).toString()));
+    public List<String> totemIgnoredEntities = new ArrayList<>(List.of(Registries.ENTITY_TYPE.getId(PLAYER).toString()));
 
     @SectionHeader("elytraDisable")
     @Sync(Option.SyncMode.OVERRIDE_CLIENT)
